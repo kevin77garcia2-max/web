@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vasos - D3DSLAYER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --naranja: #F26522;
+            --naranja-oscuro: #D35400;
+            --verde: #2ECC71;
+            --negro: #0D0D0D;
+            --gris-oscuro: #1A1A1A;
+            --gris-medio: #2A2A2A;
+            --blanco: #FFFFFF;
+            --gris-texto: #B0B0B0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--negro);
+            color: var(--blanco);
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: rgba(13, 13, 13, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(242, 101, 34, 0.2);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 55px;
+            width: auto;
+            object-fit: cover;
+            filter: drop-shadow(0 0 10px rgba(242, 101, 34, 0.6));
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--naranja);
+            letter-spacing: 2px;
+        }
+
+        .back-btn {
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s;
+        }
+
+        .back-btn:hover { color: var(--naranja); }
+
+        /* HEADER */
+        .page-header {
+            padding: 120px 5% 40px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--naranja);
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: var(--gris-texto);
+            font-size: 1.1rem;
+        }
+
+        /* PRODUCTOS GRID */
+        .productos-page {
+            padding: 40px 5% 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .producto-item {
+            background: var(--gris-medio);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(242, 101, 34, 0.1);
+            transition: all 0.3s;
+        }
+
+        .producto-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--naranja);
+            box-shadow: 0 20px 40px rgba(242, 101, 34, 0.2);
+        }
+
+        .producto-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .producto-item-info {
+            padding: 20px;
+        }
+
+        .producto-item-info h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .producto-item-info .precio {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--naranja);
+            margin-bottom: 10px;
+        }
+
+        .producto-item-info p {
+            color: var(--gris-texto);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .pedir-btn {
+            display: block;
+            background: var(--verde);
+            color: var(--blanco);
+            padding: 12px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 800;
+            text-align: center;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        .pedir-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(46, 204, 113, 0.3);
+        }
+
+        /* FOOTER */
+        .footer-simple {
+            text-align: center;
+            padding: 30px;
+            color: var(--gris-texto);
+            border-top: 1px solid rgba(242, 101, 34, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="D3DSLAYER Logo">
+            <span class="logo-text">D3DSLAYER</span>
+        </a>
+        <a href="index.html" class="back-btn">← Volver al inicio</a>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="page-header">
+        <h1>VASOS Y MATES</h1>
+        <p>Personalizados con tu diseño favorito</p>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="productos-page">
+        
+        <!-- Producto 1 -->
+        <div class="producto-item">
+            <img src="vaso1.jpg" alt="Vaso Stanley">
+            <div class="producto-item-info">
+                <h3>Vaso Stanley Style</h3>
+                <div class="precio">$15.000</div>
+                <p>Vaso térmico personalizado con tu logo o diseño. Capacidad 1.2L.</p>
+                <a href="https://wa.me/5492644777544?text=Hola!%20Quiero%20el%20Vaso%20Stanley%20Style" class="pedir-btn">Pedir por WhatsApp</a>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="producto-item">
+            <img src="vaso2.jpg" alt="Mate 3D">
+            <div class="producto-item-info">
+                <h3>Mate Personalizado</h3>
+                <div class="precio">$8.500</div>
+                <p>Mate clásico argentino con tu nombre o diseño impreso en 3D.</p>
+                <a href="https://wa.me/5492644777544?text=Hola!%20Quiero%20el%20Mate%20Personalizado" class="pedir-btn">Pedir por WhatsApp</a>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="producto-item">
+            <img src="vaso3.jpg" alt="Vaso Cervecero">
+            <div class="producto-item-info">
+                <h3>Vaso Cervecero</h3>
+                <div class="precio">$6.000</div>
+                <p>Vaso de cerveza personalizado. Ideal para regalo.</p>
+                <a href="https://wa.me/5492644777544?text=Hola!%20Quiero%20el%20Vaso%20Cervecero" class="pedir-btn">Pedir por WhatsApp</a>
+            </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="producto-item">
+            <img src="vaso4.jpg" alt="Botella Deportiva">
+            <div class="producto-item-info">
+                <h3>Botella Deportiva</h3>
+                <div class="precio">$7.500</div>
+                <p>Botella de agua personalizada. 750ml.</p>
+                <a href="https://wa.me/5492644777544?text=Hola!%20Quiero%20la%20Botella%20Deportiva" class="pedir-btn">Pedir por WhatsApp</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-simple">
+        <p>© 2024 D3DSLAYER - Impresiones 3D Personalizadas</p>
+    </footer>
+
+</body>
+</html>
