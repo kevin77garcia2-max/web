@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D3DSLAYER - Impresiones 3D Personalizadas</title>
+    <title>D3DSLAYER - Impresiones 3D</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -53,13 +53,12 @@
         }
 
         .logo img {
-            height: 50px;
+            height: 55px;
             width: auto;
-            border-radius: 50%;
             object-fit: cover;
-            box-shadow: 0 0 20px rgba(242, 101, 34, 0.4);
+            filter: drop-shadow(0 0 10px rgba(242, 101, 34, 0.6));
         }
-
+        
         .logo-text {
             font-size: 1.8rem;
             font-weight: 900;
@@ -133,7 +132,6 @@
             width: 600px;
             height: 600px;
             background: radial-gradient(circle, rgba(242, 101, 34, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
         }
 
         .hero-content {
@@ -153,12 +151,11 @@
         .hero-image img {
             max-width: 450px;
             width: 100%;
-            border-radius: 50%;
             object-fit: cover;
-            box-shadow: 0 0 60px rgba(242, 101, 34, 0.3), 0 0 100px rgba(242, 101, 34, 0.1);
             animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 40px rgba(242, 101, 34, 0.6)) drop-shadow(0 0 80px rgba(242, 101, 34, 0.3));
         }
-
+        
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-15px); }
@@ -604,7 +601,7 @@
             <li><a href="#contacto">Contacto</a></li>
         </ul>
         <!-- REEMPLAZA el href con tu link de WhatsApp -->
-        <a href="https://wa.me/TUNUMERO" class="whatsapp-btn" target="_blank">
+        <a href="https://wa.me/5492644777544" class="whatsapp-btn" target="_blank">
             <span>📱</span> WhatsApp
         </a>
     </nav>
@@ -613,13 +610,13 @@
     <section class="hero">
         <div class="hero-content">
             <h1>
-                <span class="white">IMPRESIONES 3D</span>
-                <span class="orange">PERSONALIZADAS</span>
+                <span class="white">Impresiones 3D</span>
+                <span class="orange">Personalizadas</span>
             </h1>
             <p>Diseños únicos, calidad premium y atención personalizada. Convertimos tus ideas en piezas reales.</p>
             <!-- REEMPLAZA el href con tu link de WhatsApp -->
-            <a href="https://wa.me/TUNUMERO" class="cta-button" target="_blank">
-                <span>💬</span> PEDIR POR WHATSAPP
+            <a href="https://wa.me/5492644777544" class="cta-button" target="_blank">
+                <span>💬</span> Pedir por Whatsapp
             </a>
             <div class="features">
                 <div class="feature">
@@ -631,8 +628,8 @@
                     <span>Materiales premium</span>
                 </div>
                 <div class="feature">
-                    <div class="feature-icon">⚡</div>
-                    <span>Entrega rápida</span>
+                    <div class="feature-icon">⚠️</div>
+                    <span>Importante: Todos nuestros productos se fabrican a pedido. Debido a que nuestra producción es limitada y contamos con una capacidad limitada, los tiempos de entrega pueden variar según la demanda. Siempre te informaremos la fecha estimada antes de confirmar tu compra.</span>
                 </div>
             </div>
         </div>
@@ -644,33 +641,33 @@
 
     <!-- PRODUCTOS -->
     <section class="productos" id="productos">
-        <h2 class="section-title">NUESTROS PRODUCTOS</h2>
+        <h2 class="section-title">Nuestros productos</h2>
         <p class="section-subtitle">Explorá nuestras categorías y encontrá lo que estás buscando</p>
 
         <div class="productos-grid">
             <div class="producto-card">
-                <div class="producto-img">🏆</div>
+                <img src="llaveros.png" alt="Llaveros" class="producto-img">
                 <div class="producto-info">
-                    <h3>LLAVEROS</h3>
+                    <h3>Llaveros</h3>
                     <p>Llaveros originales y personalizados.</p>
                     <a href="#" class="producto-btn">Ver productos →</a>
                 </div>
             </div>
 
             <div class="producto-card">
-                <div class="producto-img">🥤</div>
+                <img src="vasoss.png" alt="Vasos" class="producto-img">
                 <div class="producto-info">
-                    <h3>VASOS</h3>
-                    <p>Vasos y mates personalizados.</p>
-                    <a href="#" class="producto-btn">Ver productos →</a>
+                    <h3>Chops</h3>
+                    <p>Chops personalizables</p>
+                    <a href="vasos.html" class="producto-btn">Ver productos →</a>
                 </div>
             </div>
 
             <div class="producto-card">
-                <div class="producto-img">💡</div>
+                <img src="mates.png" alt="Mates" class="producto-img">
                 <div class="producto-info">
-                    <h3>LITOFANÍAS</h3>
-                    <p>Fotos que cobran vida con luz.</p>
+                    <h3>Mates animados</h3>
+                    <p>Mates de tu personaje favorito!</p>
                     <a href="#" class="producto-btn">Ver productos →</a>
                 </div>
             </div>
@@ -678,7 +675,7 @@
             <div class="producto-card">
                 <div class="producto-img">🎨</div>
                 <div class="producto-info">
-                    <h3>DECORACIÓN</h3>
+                    <h3>Decoración</h3>
                     <p>Figuras, láminas y objetos decorativos.</p>
                     <a href="#" class="producto-btn">Ver productos →</a>
                 </div>
@@ -687,7 +684,7 @@
             <div class="producto-card">
                 <div class="producto-img">✏️</div>
                 <div class="producto-info">
-                    <h3>PERSONALIZADOS</h3>
+                    <h3>Pedidos personalizados</h3>
                     <p>Tenés una idea? Nosotros la imprimimos.</p>
                     <a href="#" class="producto-btn">Ver productos →</a>
                 </div>
@@ -699,13 +696,13 @@
 
     <!-- CÓMO COMPRAR -->
     <section class="como-comprar" id="como-comprar">
-        <h2 class="section-title">¿CÓMO COMPRAR?</h2>
+        <h2 class="section-title">¿Cómo comprar?</h2>
 
         <div class="steps-container">
             <div class="step">
                 <div class="step-icon">🔍</div>
                 <div class="step-content">
-                    <h4>1. ELEGÍ</h4>
+                    <h4>1. Elegí</h4>
                     <p>Explorá nuestros productos.</p>
                 </div>
             </div>
@@ -715,7 +712,7 @@
             <div class="step">
                 <div class="step-icon">💬</div>
                 <div class="step-content">
-                    <h4>2. CONSULTÁ</h4>
+                    <h4>2. Consultá</h4>
                     <p>Escribinos por WhatsApp y pedí tu cotización.</p>
                 </div>
             </div>
@@ -725,7 +722,7 @@
             <div class="step">
                 <div class="step-icon">💳</div>
                 <div class="step-content">
-                    <h4>3. PAGÁ</h4>
+                    <h4>3. Pagá</h4>
                     <p>Te enviamos los datos para realizar el pago.</p>
                 </div>
             </div>
@@ -735,8 +732,8 @@
             <div class="step">
                 <div class="step-icon">📦</div>
                 <div class="step-content">
-                    <h4>4. RECIBÍ</h4>
-                    <p>¡Y recibí tu producto en casa!</p>
+                    <h4>4. Recibí</h4>
+                    <p>¡Y recibí tu producto coordinando con nosotros!</p>
                 </div>
             </div>
         </div>
@@ -747,7 +744,7 @@
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>Sobre D3DSLAYER</h4>
-                <p>Somos un emprendimiento dedicado a la impresión 3D. Nos apasiona crear productos únicos y de calidad que superen tus expectativas.</p>
+                <p>Somos un emprendimiento dedicado a la impresión 3D. Contamos con más de 1 año y medio de experiencia en el rubro, creando productos únicos, personalizados y de alta calidad. Nos apasiona convertir cada idea en una pieza que supere las expectativas de nuestros clientes, cuidando cada detalle desde el diseño hasta la entrega.</p>
                 <div class="social-icons">
                     <!-- REEMPLAZA los href con tus links reales -->
                     <a href="#" class="social-ig" target="_blank">📷</a>
@@ -770,12 +767,11 @@
             <div class="footer-col">
                 <h4>¿Dónde estamos?</h4>
                 <div class="map-container">
-                    <!-- REEMPLAZA esto con tu mapa de Google Maps embebido -->
-                    🗺️ Mapa de Google Maps
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d13607.712355833357!2d-68.53855800311246!3d-31.49866037515846!3m2!1i1024!2i768!4f13.1!2m1!1splaza%20de%20chimbas!5e0!3m2!1ses-419!2sru!4v1782447834579!5m2!1ses-419!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
                 <div class="location-text">
                     <span>📍</span>
-                    <span>Victoria, Entre Ríos - <a href="#" target="_blank">Ver en Google Maps</a></span>
+                    <span>Plaza Departamental Chimbas, San Juan, Argentina - <a href="https://maps.app.goo.gl/2bUUHs3pDhhYvuxE7" target="_blank">Ver en Google Maps</a></span>
                 </div>
             </div>
         </div>
